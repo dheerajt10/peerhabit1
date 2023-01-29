@@ -1,0 +1,242 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  font-size: 20px;
+}
+
+/* CSS */
+:root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
+
+#user_name {
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+
+/* Gray 900 */
+color: #323F4B;
+
+
+}
+
+#user_num_text {
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 34px;
+line-height: 41px;
+text-align: center;
+
+/* Primary */
+color: #1F8A70;
+}
+
+#my_habits {
+  font-size: 25px;
+}
+
+#user_desc_text {
+/* Habits */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+text-align: center;
+
+color: #4FAC54;
+
+}
+
+.week-days-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.week-day-label {
+  position: relative;
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  line-height: 1.5em;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin-right: 0.5em;
+}
+
+.week-day-initial {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.week-day-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.week-day-checkbox:checked + .week-day-initial {
+  background-color: #007bff;
+  border-radius: 50%;
+  color: #fff;
+}
+
+#create_group {
+  font-size: 22px;
+  position: fixed;
+  align-content: center;
+}
+:root {
+  --square-size: 15px;
+  --square-gap: 5px;
+  --week-width: calc(var(--square-size) + var(--square-gap));
+}
+
+.months { grid-area: months; }
+.days { grid-area: days; }
+.squares { grid-area: squares; }
+
+.graph {
+  display: inline-grid;
+  grid-template-areas: "empty months"
+                       "days squares";
+  grid-template-columns: auto 1fr;
+  grid-gap: 10px;
+}
+
+.months {
+  display: grid;
+  grid-template-columns: calc(var(--week-width) * 4) /* Jan */
+                         calc(var(--week-width) * 4) /* Feb */
+                         calc(var(--week-width) * 4) /* Mar */
+                         calc(var(--week-width) * 5) /* Apr */
+                         calc(var(--week-width) * 4) /* May */
+                         calc(var(--week-width) * 4) /* Jun */
+                         calc(var(--week-width) * 5) /* Jul */
+                         calc(var(--week-width) * 4) /* Aug */
+                         calc(var(--week-width) * 4) /* Sep */
+                         calc(var(--week-width) * 5) /* Oct */
+                         calc(var(--week-width) * 4) /* Nov */
+                         calc(var(--week-width) * 5) /* Dec */;
+}
+
+.days,
+.squares {
+  display: grid;
+  grid-gap: var(--square-gap);
+  grid-template-rows: repeat(7, var(--square-size));
+}
+
+.squares {
+  grid-auto-flow: column;
+  grid-auto-columns: var(--square-size);
+}
+
+
+/* Other styling */
+#flexCheckDefault{
+  left:10%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 12px;
+}
+
+.graph {
+  padding: 20px;
+  border: 1px #e1e4e8 solid;
+  margin: 20px;
+}
+
+.days li:nth-child(odd) {
+  visibility: hidden;
+}
+
+.squares li {
+  background-color: #ebedf0;
+}
+
+.squares li[data-level="1"] {
+  background-color: #c6e48b;
+}
+
+.squares li[data-level="2"] {
+  background-color: #7bc96f;
+}
+
+.squares li[data-level="3"] {
+  background-color: #196127;
+}
+
+
+.habit-profile-pic {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-link-custom {
+  font-size: 16px;
+  transition: all 0.4s ease-in-out;
+  font-weight: 500;
+  font-family: 'Inter';
+  text-decoration: transparent;
+
+}
+
+.nav-link-custom:hover {
+  color: #2D9CDB !important;
+  text-decoration: underline;
+}
+
+.habit-card {
+  transition: all 0.2s ease-in-out;
+}
+
+.habit-card:hover {
+  transform: scale(1.1);
+}
+
+.navbar-custom {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.group-heading-custom {
+  font-family: 'Inter';
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 30px;
+    color: #00425A;
+}
+
+.btn-custom {
+  font-size: 16px !important;
+  background-color: #1F8A70;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.1s ease-in;
+  border: none;
+}
+
+.btn-custom:hover {
+  background-color: #1c8067;
+}
+
+.habit-listitem-custom {
+    font-family: 'Inter';
+  font-weight: 500;
+  font-size: 18px;
+}
+
